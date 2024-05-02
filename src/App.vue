@@ -1,22 +1,21 @@
 <template>
   <div class="wrapper">
+    <Header />
     <main>
-      <div class="container">
-        <Main />
-      </div>
+      <Main />
     </main>
   </div>
 </template>
 <script setup>
+import Header from "./components/Header.vue";
 import Main from "./pages/Main.vue";
 </script>
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+.wrapper {
+  position: relative;
 }
 
-.logo {
+/* .logo {
   display: block;
   margin: 0 auto 2rem;
 }
@@ -71,5 +70,5 @@ nav a:first-of-type {
     padding: 1rem 0;
     margin-top: 1rem;
   }
-}
+} */
 </style>

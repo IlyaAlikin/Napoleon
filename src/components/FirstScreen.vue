@@ -43,7 +43,7 @@
   color: var(--white-color);
   font-size: clamp(32px, 6vw, 84px);
   position: relative;
-  z-index: 3;
+  z-index: 4;
   max-width: 1250px;
   text-align: center;
 }
@@ -54,11 +54,24 @@
   text-align: center;
   max-width: 750px;
 }
+.full-screen__content::after {
+  content: "";
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
 
 .full-screen__text {
   font-size: clamp(18px, 3vw, 28px);
   color: var(--white-color);
   margin-bottom: 30px;
+  position: relative;
+  z-index: 4;
 }
 .full-screen__video {
   position: absolute;
@@ -68,6 +81,7 @@
   height: 100%;
   object-fit: cover;
 }
+
 .full-screen__btn {
   display: inline-block;
   border: 1px solid var(--white-color);
@@ -77,6 +91,8 @@
   font-size: clamp(16px, 3vw, 26px);
   text-decoration: none;
   transition: all 0.4s ease;
+  position: relative;
+  z-index: 4;
 }
 .full-screen__btn:hover {
   background-color: var(--white-color);
