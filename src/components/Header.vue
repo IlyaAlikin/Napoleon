@@ -4,7 +4,7 @@
       <div class="header__body">
         <div class="header__logo">Napoleon</div>
         <nav class="header__nav">
-          <ul class="header__list list-header">
+          <ul class="header__list list-header" id="list">
             <li class="list-header">Биография</li>
             <li class="list-header">Линия времени</li>
             <li class="list-header">Интерактивная карта</li>
@@ -24,7 +24,9 @@
 <script setup>
 function toggleMenu() {
   const burger = document.getElementById("burger");
+  const list = document.getElementById("list");
   burger.classList.toggle("active");
+  list.classList.toggle("active");
 }
 </script>
 <style scoped>
@@ -165,16 +167,34 @@ function toggleMenu() {
     position: fixed;
     width: 100%;
     height: 70px;
-    background-color: var(--blue-color);
-    top: -85px;
+    top: -70px;
     left: 0;
     padding: 0px 15px;
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
   }
   .header__list.active {
     top: 70px;
+    background-color: rgba(256, 256, 256, 0.3);
+    opacity: 1;
+    visibility: visible;
   }
   .header__body {
     position: relative;
+  }
+}
+@media (max-width: 420px) {
+  .header__list {
+    flex-direction: column;
+    padding: 10px;
+    height: 100px;
+  }
+  .header__body {
+    gap: 0px;
+  }
+  .header__controls {
+    padding-right: 20px;
   }
 }
 </style>
