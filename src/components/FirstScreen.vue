@@ -2,15 +2,17 @@
   <div class="full-screen">
     <div class="full-screen__body">
       <h1 class="full-screen__title">
-        Наполеоновские кампании: <span class="blue">сражения, </span>
-        <span>победы,</span> <span class="red">поражения</span>
+        Наполеоновские кампании:
+        <p>
+          <span class="blue">сражения, </span>
+          <span>победы,</span> <span class="red">поражения</span>
+        </p>
       </h1>
       <div class="full-screen__content">
         <p class="full-screen__text">
-          Immerse yourself in the history of the great Napoleonic campaigns and
-          the exciting moments of the wars that rewrote the map of Europe. Feel
-          the excitement of a great conqueror! Start your historical journey
-          now.
+          Погрузитесь в историю великих наполеоновских кампаний и захватывающие
+          моменты войн, переписавших карту Европы. Почувствуйте азарт великого
+          завоевателя! Начните свое историческое путешествие прямо сейчас.
         </p>
         <a class="full-screen__btn" href="#">Узнать больше</a>
       </div>
@@ -39,12 +41,13 @@
 }
 .full-screen__title {
   color: var(--white-color);
-  font-size: 84px;
+  font-size: clamp(32px, 6vw, 84px);
   position: relative;
   z-index: 3;
   max-width: 1250px;
   text-align: center;
 }
+
 .full-screen__content {
   position: relative;
   z-index: 3;
@@ -53,7 +56,7 @@
 }
 
 .full-screen__text {
-  font-size: 28px;
+  font-size: clamp(18px, 3vw, 28px);
   color: var(--white-color);
   margin-bottom: 30px;
 }
@@ -69,9 +72,9 @@
   display: inline-block;
   border: 1px solid var(--white-color);
   color: var(--white-color);
-  padding: 10px 20px;
+  padding: 10px 30px;
   border-radius: 10px;
-  font-size: 24px;
+  font-size: clamp(16px, 3vw, 26px);
   text-decoration: none;
   transition: all 0.4s ease;
 }
@@ -84,5 +87,10 @@
 }
 .red {
   color: var(--red-color);
+}
+@media (max-width: 568px) {
+  .full-screen__title span {
+    font-size: clamp(21px, 6vw, 84px);
+  }
 }
 </style>
