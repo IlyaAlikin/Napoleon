@@ -5,7 +5,9 @@
         <div class="header__logo">Napoleon</div>
         <nav class="header__nav">
           <ul class="header__list list-header" id="list">
-            <li class="list-header">Биография</li>
+            <RouterLink to="/biography">
+              <li class="list-header">Биография</li>
+            </RouterLink>
             <li class="list-header">Линия времени</li>
             <li class="list-header">Интерактивная карта</li>
           </ul>
@@ -22,6 +24,8 @@
   </header>
 </template>
 <script setup>
+import { RouterLink, RouterView } from "vue-router";
+
 function toggleMenu() {
   const burger = document.getElementById("burger");
   const list = document.getElementById("list");
