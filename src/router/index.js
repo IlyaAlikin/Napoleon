@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Main from "../pages/Main.vue";
 import Biography from "../pages/Biography.vue";
+import Timeline from "../pages/Timeline.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -14,6 +15,11 @@ const router = createRouter({
       path: "/biography",
       name: "about",
       component: Biography,
+    },
+    {
+      path: "/timeline",
+      name: "timeline",
+      component: Timeline,
     },
   ],
 });

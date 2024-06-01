@@ -10,7 +10,9 @@
             <RouterLink to="/biography">
               <li class="list-header">Биография</li>
             </RouterLink>
-            <li class="list-header">Линия времени</li>
+            <RouterLink to="/timeline">
+              <li class="list-header">Линия времени</li>
+            </RouterLink>
             <li class="list-header">Интерактивная карта</li>
           </ul>
         </nav>
@@ -86,6 +88,11 @@ function toggleMenu() {
 .list-header {
   color: var(--white-color);
   font-size: clamp(16px, 2.5vw, 24px);
+  transition: all 0.3s ease;
+}
+
+.list-header:hover {
+  color: var(--gold-color);
 }
 .header__controls {
   display: flex;
