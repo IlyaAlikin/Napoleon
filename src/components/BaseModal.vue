@@ -2,7 +2,7 @@
   <div @keydown.esc="modalClose()" tabindex="-1" ref="modal" class="modal">
     <div class="modal__link" @click="modalClose()"></div>
     <div class="modal__content">
-      <div class="modal__close" @click="modalClose()">вфвфыв</div>
+      <div class="modal__close" @click="modalClose()">Закрыть</div>
       <div class="modal__img">
         <slot name="img"></slot>
       </div>

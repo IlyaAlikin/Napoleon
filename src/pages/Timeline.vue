@@ -14,25 +14,39 @@
   </section>
   <section class="section dark-gray-bg timeline">
     <div class="timeline__container">
-      <div class="timeline__box box-timeline" v-for="n in 10" :key="n">
+      <div
+        class="timeline__box box-timeline"
+        v-for="item in data.items"
+        :key="item"
+      >
         <div class="timeline-circle"></div>
         <div class="timeline__content">
-          <h3 class="box-timeline__title">Восхождение наполеона</h3>
-          <div class="box-timeline__text">1799</div>
-          {{ n }}
-          <button @click="modalOpen(), receiveData(n)">Очистить всё</button>
+          <h3 class="box-timeline__title">{{ item.name }}</h3>
+          <div class="box-timeline__text">{{ item.year }}</div>
+          <button @click="modalOpen(), receiveData(item)">Узнать больше</button>
           <span class="arrow"></span>
         </div>
       </div>
     </div>
   </section>
-  <BaseModal v-show="showModal" @opening-request="modalOpen" :title="getData()">
-  </BaseModal>
+  <div v-if="getData()">
+    <BaseModal
+      v-show="showModal"
+      @opening-request="modalOpen"
+      :title="getData().name"
+    >
+    </BaseModal>
+  </div>
 </template>
 <script setup>
 import BaseModal from "../components/BaseModal.vue";
 
 import { ref, reactive } from "vue";
+
+import items from "../data/data.json";
+
+const data = ref();
+data.value = items;
 
 const state = reactive({
   data: null,

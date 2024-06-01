@@ -61,7 +61,9 @@
             </p>
             <div class="section__img">
               <img src="/img/Crowned.jpeg" alt="" />
-              <p class="img-section-descripton">Наполеон в Альпах</p>
+              <p class="img-section-descripton">
+                Коронация Наполеона императором Франции
+              </p>
             </div>
             <p class="section__paragraph white">
               Но население и армия не забыли меня! При их поддержке я смог снова
@@ -125,5 +127,6 @@ onUnmounted(() => {
   text-align: center;
   margin-top: 10px;
   color: var(--white-color);
+  font-style: italic;
 }
 </style>
