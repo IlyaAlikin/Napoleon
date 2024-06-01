@@ -2,7 +2,9 @@
   <header class="header">
     <div class="header__container">
       <div class="header__body">
-        <div class="header__logo">Napoleon</div>
+        <RouterLink to="/">
+          <div class="header__logo">Napoleon</div>
+        </RouterLink>
         <nav class="header__nav">
           <ul class="header__list list-header" id="list">
             <RouterLink to="/biography">

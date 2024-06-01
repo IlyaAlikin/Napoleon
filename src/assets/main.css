@@ -17,6 +17,25 @@ html {
   --gold-color: #e1e1e1;
   /* безопасный цвет */
   --white-color: #fff;
+
+  --gray-color: #202326;
+}
+
+.blue {
+  color: var(--blue-color);
+}
+
+.red {
+  color: var(--red-color);
+}
+
+.white {
+  color: var(--white-color);
+}
+
+.dark-gray-bg {
+  background: var(--gray-color);
+  color: var(--white-color);
 }
 
 .wrapper {
@@ -29,4 +48,96 @@ html {
   max-width: 1830px;
   padding: 15px;
   margin: 0 auto;
+}
+
+.full-screen {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.full-screen__body {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.full-screen__title {
+  color: var(--white-color);
+  font-size: clamp(32px, 6vw, 84px);
+  position: relative;
+  z-index: 4;
+  max-width: 1250px;
+  text-align: center;
+}
+
+.full-screen__content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  max-width: 750px;
+}
+
+.full-screen__content::after {
+  content: "";
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.full-screen__text {
+  font-size: clamp(18px, 3vw, 28px);
+  color: var(--white-color);
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 4;
+}
+
+.full-screen__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.full-screen__btn {
+  display: inline-block;
+  border: 1px solid var(--white-color);
+  color: var(--white-color);
+  padding: 10px 30px;
+  border-radius: 10px;
+  font-size: clamp(16px, 3vw, 26px);
+  text-decoration: none;
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 4;
+}
+
+.full-screen__btn:hover {
+  background-color: var(--white-color);
+  color: var(--blue-color);
+}
+
+.section__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+@media (max-width: 568px) {
+  .full-screen__title span {
+    font-size: clamp(21px, 6vw, 84px);
+  }
 }
