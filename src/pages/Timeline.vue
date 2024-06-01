@@ -19,22 +19,40 @@
         <div class="timeline__content">
           <h3 class="box-timeline__title">Восхождение наполеона</h3>
           <div class="box-timeline__text">1799</div>
+          {{ n }}
+          <button @click="modalOpen(), receiveData(n)">Очистить всё</button>
           <span class="arrow"></span>
         </div>
       </div>
     </div>
   </section>
+  <BaseModal v-show="showModal" @opening-request="modalOpen" :title="getData()">
+  </BaseModal>
 </template>
 <script setup>
-import { onMounted } from "vue";
-import { Swiper, SwiperSlide } from "swiper/vue";
-import BiographySlide from "../components/BiographySlide.vue";
-import { Pagination } from "swiper/modules";
+import BaseModal from "../components/BaseModal.vue";
 
-import "swiper/css";
-import "swiper/css/pagination";
+import { ref, reactive } from "vue";
 
-const modules = [Pagination];
+const state = reactive({
+  data: null,
+});
+
+const showModal = ref(false);
+
+const modalOpen = (item) => {
+  showModal.value = !showModal.value;
+  let body = document.getElementsByTagName("body")[0];
+  body.classList.toggle("lock");
+};
+
+const receiveData = (item) => {
+  state.data = item;
+};
+
+const getData = () => {
+  return state.data;
+};
 </script>
 <style scoped>
 .timeline {
