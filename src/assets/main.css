@@ -16,7 +16,7 @@ html {
   /* вторичный главный цвет */
   --gold-color: #e1e1e1;
   /* безопасный цвет */
-  --white-color: #fff;
+  --white-color: #ffffff;
 
   --gray-color: #202326;
 }
@@ -35,7 +35,6 @@ html {
 
 .dark-gray-bg {
   background: var(--gray-color);
-  color: var(--white-color);
 }
 
 .wrapper {
