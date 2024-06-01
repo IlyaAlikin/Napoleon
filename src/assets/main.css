@@ -135,6 +135,15 @@ html {
   gap: 15px;
 }
 
+.swiper-pagination {
+  position: relative !important;
+}
+
+.swiper-pagination-bullet {
+  text-align: center;
+  background: var(--blue-color) !important;
+}
+
 @media (max-width: 568px) {
   .full-screen__title span {
     font-size: clamp(21px, 6vw, 84px);

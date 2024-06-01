@@ -34,6 +34,8 @@
       v-show="showModal"
       @opening-request="modalOpen"
       :title="getData().name"
+      :description="getData().description"
+      :images="getData().images"
     >
     </BaseModal>
   </div>

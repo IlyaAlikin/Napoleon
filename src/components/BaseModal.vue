@@ -3,23 +3,49 @@
     <div class="modal__link" @click="modalClose()"></div>
     <div class="modal__content">
       <div class="modal__close" @click="modalClose()">Закрыть</div>
-      <div class="modal__img">
-        <slot name="img"></slot>
-      </div>
       <h2 class="modal__title">
         {{ title }}
       </h2>
+      <div class="modal__wrapper">
+        <div v-if="images">
+          <swiper
+            :slides-per-view="1"
+            :space-between="10"
+            :modules="modules"
+            :pagination="{
+              clickable: true,
+            }"
+            class="modal__slider"
+          >
+            <swiper-slide v-for="image in images">
+              <img :src="image" alt="" />
+            </swiper-slide>
+          </swiper>
+        </div>
+        <p class="modal__description">
+          {{ description }}
+        </p>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
 import { ref, getCurrentInstance, onMounted } from "vue";
+import { Swiper, SwiperSlide } from "swiper/vue";
+import { Pagination } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/pagination";
+
+const modules = [Pagination];
 
 const modal = ref(null);
 
 const props = defineProps({
   title: String,
+  description: String,
+  images: Array,
 });
 
 onMounted(() => {
@@ -74,11 +100,30 @@ const modalClose = () => {
   text-align: center;
   font-weight: 400;
   font-size: 22px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .modal__title:has(.for-applicants__modal-title) {
   margin: 20px 0px;
+}
+
+.modal__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.modal__slider {
+}
+.modal__description {
+}
+
+.modal__slider {
+  max-width: 360px;
+}
+
+.modal__slider img {
+  max-width: 360px;
 }
 
 .modal__btns {
@@ -100,6 +145,14 @@ const modalClose = () => {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+}
+
+.modal__close {
+  text-align: right;
+}
+
+.modal__description {
+  font-size: 16px;
 }
 
 /* .modal__btn_yellow {
