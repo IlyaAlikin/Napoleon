@@ -26,6 +26,7 @@
   </section>
 </template>
 <script setup>
+import { onMounted } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import BiographySlide from "../components/BiographySlide.vue";
 import { Pagination } from "swiper/modules";
@@ -34,34 +35,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 const modules = [Pagination];
-
-import { ref, onMounted } from "vue";
-
-let lastScrollTop = 0;
-const timeline = ref(null);
-
-onMounted(() => {
-  const handleScroll = () => {
-    const scrollPos = window.scrollY || window.pageYOffset;
-
-    if (scrollPos > lastScrollTop) {
-      // Прокрутка вниз
-      timeline.value.classList.add("scroll-down");
-      timeline.value.classList.remove("scroll-up");
-    } else {
-      // Прокрутка вверх
-      timeline.value.classList.add("scroll-up");
-      timeline.value.classList.remove("scroll-down");
-    }
-    lastScrollTop = scrollPos <= 0 ? 0 : scrollPos;
-  };
-
-  document.addEventListener("scroll", handleScroll);
-
-  return () => {
-    document.removeEventListener("scroll", handleScroll);
-  };
-});
 </script>
 <style scoped>
 .timeline {

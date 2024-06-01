@@ -22,6 +22,9 @@ const router = createRouter({
       component: Timeline,
     },
   ],
+  scrollBehavior(to, from, savedPosition) {
+    return { top: 0 };
+  },
 });
 
 export default router;
