@@ -17,7 +17,9 @@
     <div class="section__container">
       <div class="section__block block-brief">
         <div class="section__text">
-          <h2 class="section__title white">Биография в двух словах</h2>
+          <h2 class="section__title white" @click="playAudio()">
+            Биография в двух словах
+          </h2>
           <div class="section__wrapper">
             <p class="section__paragraph white">
               Я Наполеон первый Бонапарт, рожденный пятнадцатого августа, одна
@@ -83,6 +85,7 @@
   </section>
 </template>
 <script setup>
+import { onUnmounted } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import BiographySlide from "../components/BiographySlide.vue";
 import { Pagination } from "swiper/modules";
@@ -90,7 +93,16 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
+const rusAudio = new Audio("/audio/rusNapoleon.mp3");
+const playAudio = () => {
+  rusAudio.play();
+};
+
 const modules = [Pagination];
+onUnmounted(() => {
+  rusAudio.pause();
+  rusAudio.currentTime = 0;
+});
 </script>
 <style scoped>
 .biography {

@@ -101,10 +101,7 @@ const modules = [Pagination];
   padding: 20px 30px;
   border-radius: 6px;
 }
-.box-timeline__title {
-}
-.box-timeline__text {
-}
+
 .timeline-circle {
   position: absolute;
   width: 40px;
