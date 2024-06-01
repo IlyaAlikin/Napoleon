@@ -3,9 +3,15 @@
     <div class="modal__link" @click="modalClose()"></div>
     <div class="modal__content">
       <div class="modal__close" @click="modalClose()">Закрыть</div>
-      <h2 class="modal__title">
-        {{ title }}
-      </h2>
+      <div class="modal__top">
+        <h2 class="modal__title">
+          {{ title }}
+        </h2>
+        <button class="modal__volume" @click="playAudio()">
+          <font-awesome-icon :icon="['fas', 'volume-off']" />
+        </button>
+      </div>
+
       <div class="modal__wrapper">
         <div v-if="images">
           <swiper
@@ -72,6 +78,20 @@ const modalClose = () => {
   inset: 0px;
 }
 
+.modal__top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal__volume {
+  font-size: 32px;
+  cursor: pointer;
+  transform: translateY(1px);
+}
 .modal__link {
   position: absolute;
   top: 0;
@@ -100,7 +120,6 @@ const modalClose = () => {
   text-align: center;
   font-weight: 400;
   font-size: 22px;
-  margin-bottom: 20px;
 }
 
 .modal__title:has(.for-applicants__modal-title) {
