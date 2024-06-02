@@ -98,7 +98,7 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-const rusAudio = new Audio("/audio/rusNapoleon.mp3");
+const rusAudio = new Audio("./audio/rusNapoleon.mp3");
 const playAudio = () => {
   rusAudio.play();
 };
