@@ -35,7 +35,7 @@
               блистательных побед в Италии в конце восемнадцатого века, я
               заключил выгодный для Франции мир с австрийцами.
             </p>
-            <div class="section__img">
+            <div class="section__img biography__img">
               <img src="/img/Napoleon-3.jpg" alt="" />
               <p class="img-section-descripton">Наполеон в Альпах</p>
             </div>
@@ -46,7 +46,7 @@
               опираясь на нее, стал во главе триумвирата консулов вместе с
               Сийесом и Рожером Дюко.
             </p>
-            <div class="section__img">
+            <div class="section__img biography__img">
               <img src="/img/Egypt.jpg" alt="" />
               <p class="img-section-descripton">Наполеон в Египте</p>
             </div>
@@ -62,7 +62,7 @@
               противника вступили в Париж, и я принужден был отречься от
               престола и отправиться в изгнание на остров Эльбу.
             </p>
-            <div class="section__img">
+            <div class="section__img biography__img">
               <img src="/img/Crowned.jpeg" alt="" />
               <p class="img-section-descripton">
                 Коронация Наполеона императором Франции
@@ -79,7 +79,7 @@
               первой Французской империи, давшей основу государственности моим
               потомкам!
             </p>
-            <div class="section__img">
+            <div class="section__img biography__img">
               <img src="/img/Nothing.jpg" alt="" />
               <p class="img-section-descripton">There's nothing we can do</p>
             </div>

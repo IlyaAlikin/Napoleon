@@ -204,18 +204,31 @@ body.lock {
   text-align: center;
   font-size: clamp(32px, 4vw, 48px);
 }
+.army-wrapper {
+  gap: 40px;
+}
 
-.section__block {
+.block-section__wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 40px;
 }
 
+.block-section:nth-child(even) .block-section__wrapper {
+  flex-direction: row-reverse;
+}
+
 .block-section__text {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.block-section__title {
+  text-align: center;
+  font-size: clamp(22px, 3.5vw, 36px);
+  margin-bottom: 20px;
 }
 
 .section__block .block-section__text {
@@ -228,9 +241,39 @@ body.lock {
 .section__block .section__img {
   margin: 0 0 0 0;
 }
+.biography__img {
+  margin: 0 auto !important;
+}
 
+.section__paragraph {
+  font-size: clamp(14px, 0.5vw, 16px);
+}
+@media (max-width: 992px) {
+  .block-section__wrapper {
+    justify-content: space-between;
+  }
+
+  .section__block .block-section__text {
+    flex: 1 1 30%;
+  }
+}
+
+@media (max-width: 680px) {
+  .block-section__wrapper,
+  .block-section:nth-child(even) .block-section__wrapper {
+    flex-direction: column;
+  }
+
+  .block-section__img img {
+    max-width: 320px !important;
+  }
+}
 @media (max-width: 568px) {
   .full-screen__title span {
     font-size: clamp(21px, 6vw, 84px);
+  }
+  .block-section__img img {
+    max-width: 280px !important;
+    height: 420px !important;
   }
 }
