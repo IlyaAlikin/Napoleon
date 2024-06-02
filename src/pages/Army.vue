@@ -7,12 +7,12 @@
           Грохот барабанов, отблеск стали: "Армия Наполеона", "Орлы Империи":
           История Великой Армии
         </p>
-        <a class="full-screen__btn" href="#">Читать статью</a>
+        <a class="full-screen__btn" href="#army">Читать статью</a>
       </div>
       <img src="/img/Napoleon-2.jpg" class="full-screen__video" />
     </div>
   </section>
-  <section class="section dark-gray-bg biography">
+  <section class="section dark-gray-bg biography" id="army">
     <div class="section__container">
       <div class="section__block block-brief">
         <div class="section__text">
@@ -153,44 +153,6 @@
     </div>
     <div class="section__container">
       <div class="section__block block-brief">
-        <!-- <div class="section__text">
-          <div class="biography__top army">
-            <h2 class="section__title white">Роды войск "Grande Armée"</h2>
-          </div>
-          <div class="army__wrapper">
-            <h4 class="block-army__title white">
-              Армия Наполеона, известная как "Grande Armée", обладала передовой
-              для своего времени организацией и включала в себя следующие
-              основные рода войск:
-            </h4>
-            <div class="army__block block-army">
-              <div class="army__block__name">1. Пехота:</div>
-              <ul class="army-block__text">
-                <li class="army-block__li">
-                  Линейная пехота: составляла основу армии и использовалась для
-                  фронтальных атак и обороны.
-                </li>
-                <li class="army-block__li">
-                  Легкая пехота: более мобильная, вооруженная ружьями с нарезным
-                  стволом, использовалась для разведки, засад и ведения
-                  стрельбы.
-                </li>
-                <li class="army-block__li">
-                  Гренадеры: элитные подразделения линейной пехоты, отличавшиеся
-                  высоким ростом, выправкой и использовавшиеся для штурма
-                  укреплений.
-                </li>
-                <li class="army-block__li">
-                  Вольтижеры: элитные части легкой пехоты, отличавшиеся
-                  меткостью и использовавшиеся для разведки и перестрелок.
-                </li>
-              </ul>
-              <div class="block-army__img">
-                <img src="" alt="" />
-              </div>
-            </div>
-          </div>
-        </div> -->
         <div class="section__text">
           <div class="section__wrapper army-wrapper">
             <div class="biography__top">

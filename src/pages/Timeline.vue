@@ -7,12 +7,12 @@
           Сдесь собраны все важнейшие события в жизни Наполеона Бонапарта I в
           хронологическом порядке
         </p>
-        <a class="full-screen__btn" href="#">Читать статью</a>
+        <a class="full-screen__btn" href="#timeline">Читать статью</a>
       </div>
       <img src="/img/Time.jpg" class="full-screen__video" />
     </div>
   </section>
-  <section class="section dark-gray-bg timeline">
+  <section class="section dark-gray-bg timeline" id="timeline">
     <div class="timeline__container">
       <div
         class="timeline__box box-timeline"

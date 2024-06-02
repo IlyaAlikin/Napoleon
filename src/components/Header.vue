@@ -18,10 +18,6 @@
             </RouterLink>
           </ul>
         </nav>
-        <!-- <div class="header__controls">
-          <button class="language-button">Ru</button>
-          <button class="language-button">En</button>
-        </div> -->
         <button @click="toggleMenu()" id="burger" class="header__burger">
           <span></span>
         </button>

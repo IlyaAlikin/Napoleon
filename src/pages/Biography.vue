@@ -8,12 +8,12 @@
           удивительный путь от обычного юноши до великого императора Франции.
           Добро пожаловать в увлекательное путешествие через эпоху Наполеона."
         </p>
-        <a class="full-screen__btn" href="#">Читать статью</a>
+        <a class="full-screen__btn" href="#biography">Читать статью</a>
       </div>
       <img src="/img/Young.jpg" class="full-screen__video biography__img" />
     </div>
   </section>
-  <section class="section dark-gray-bg biography">
+  <section class="section dark-gray-bg biography" id="biography">
     <div class="section__container">
       <div class="section__block block-brief">
         <div class="section__text">
