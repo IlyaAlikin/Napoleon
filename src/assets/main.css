@@ -270,6 +270,12 @@ body.lock {
   }
 }
 
+@media (max-width: 768px) {
+  .box-timeline:nth-child(2n) {
+    left: 0 !important;
+  }
+}
+
 @media (max-width: 680px) {
   .block-section__wrapper,
   .block-section:nth-child(even) .block-section__wrapper {
