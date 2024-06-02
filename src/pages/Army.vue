@@ -118,7 +118,7 @@
                 <div class="section__img block-section__img">
                   <img src="/img/Alpes.jpeg" alt="" />
                   <p class="img-section-descripton">
-                    Наполеон в начале военной карьеры
+                    "Переход Наполео́на через Альпы"
                   </p>
                 </div>
               </div>

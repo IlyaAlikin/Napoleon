@@ -2,7 +2,21 @@
   <div @keydown.esc="modalClose()" tabindex="-1" ref="modal" class="modal">
     <div class="modal__link" @click="modalClose()"></div>
     <div class="modal__content">
-      <div class="modal__close" @click="modalClose()"></div>
+      <div class="modal__close" @click="modalClose()">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 18 18"
+          fill="none"
+          class="modal__close-icon"
+        >
+          <path
+            d="M1.8 18L0 16.2L7.2 9L0 1.8L1.8 0L9 7.2L16.2 0L18 1.8L10.8 9L18 16.2L16.2 18L9 10.8L1.8 18Z"
+            style="fill: var(--gray-color)"
+          />
+        </svg>
+      </div>
       <div class="modal__top">
         <h2 class="modal__title">
           {{ title }}
@@ -176,6 +190,10 @@ const modalClose = () => {
   max-height: 340px;
   overflow-y: auto;
   padding-right: 5px;
+}
+
+.modal__close-icon {
+  cursor: pointer;
 }
 
 @media (max-width: 992px) {

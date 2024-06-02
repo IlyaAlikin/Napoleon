@@ -22,8 +22,13 @@
         <div class="timeline-circle"></div>
         <div class="timeline__content">
           <h3 class="box-timeline__title">{{ item.name }}</h3>
-          <div class="box-timeline__text">{{ item.year }}</div>
-          <button @click="modalOpen(), receiveData(item)">Узнать больше</button>
+          <div class="box-timeline__year">{{ item.year }}</div>
+          <button
+            @click="modalOpen(), receiveData(item)"
+            class="box-timeline__btn"
+          >
+            Узнать больше
+          </button>
           <span class="arrow"></span>
         </div>
       </div>
@@ -134,6 +139,9 @@ const getData = () => {
   position: relative;
   padding: 20px 30px;
   border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .timeline-circle {
@@ -170,6 +178,24 @@ const getData = () => {
 }
 .box-timeline__title {
   font-size: clamp(18px, 2vw, 22px);
+}
+.box-timeline__btn {
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  user-select: none;
+  font-family: "Lora", serif;
+  display: inline-block;
+  border: none;
+  max-width: 300px;
+  background: var(--gold-color);
+  color: var(--white-color);
+}
+
+.box-timeline__year {
+  color: var(--gold-color);
+  font-size: 24px;
 }
 
 @media (max-width: 992px) {
