@@ -41,6 +41,7 @@
       :title="getData().name"
       :description="getData().description"
       :images="getData().images"
+      :audio="getData().audio"
     >
     </BaseModal>
   </div>
@@ -65,6 +66,7 @@ const modalOpen = (item) => {
   showModal.value = !showModal.value;
   let body = document.getElementsByTagName("body")[0];
   body.classList.toggle("lock");
+  console.log(state.data);
 };
 
 const receiveData = (item) => {

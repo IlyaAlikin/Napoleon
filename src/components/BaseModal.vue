@@ -1,8 +1,8 @@
 <template>
   <div @keydown.esc="modalClose()" tabindex="-1" ref="modal" class="modal">
-    <div class="modal__link" @click="modalClose()"></div>
+    <div class="modal__link" @click="stopAudio(), modalClose()"></div>
     <div class="modal__content">
-      <div class="modal__close" @click="modalClose()">
+      <div class="modal__close" @click="stopAudio(), modalClose()">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20"
@@ -50,7 +50,7 @@
 </template>
 
 <script setup>
-import { ref, getCurrentInstance, onMounted } from "vue";
+import { ref, getCurrentInstance, onMounted, watch } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Pagination } from "swiper/modules";
 
@@ -60,24 +60,57 @@ import "swiper/css/pagination";
 const modules = [Pagination];
 
 const modal = ref(null);
+const audio = ref(null);
 
 const props = defineProps({
   title: String,
   description: String,
   images: Array,
+  audio: String,
 });
+
+// Наблюдаем за изменением props.audio
+watch(
+  () => props.audio,
+  (newAudioSrc) => {
+    initAudio(newAudioSrc); // Вызов initAudio при изменении props.audio
+  }
+);
 
 onMounted(() => {
   modal.value.focus();
-  console.log(modal.value);
 });
 
 const { emit } = getCurrentInstance();
 
 const modalClose = () => {
+  stopAudio();
   emit("opening-request");
 };
+
+const initAudio = (path) => {
+  if (audio.value) {
+    audio.value.pause();
+    audio.value = null;
+  }
+  audio.value = new Audio(path); // Убран лишний ${...}
+};
+
+const playAudio = () => {
+  if (!audio.value) {
+    initAudio(props.audio); // Передаем текущее значение props.audio
+  }
+  audio.value.play();
+};
+
+const stopAudio = () => {
+  if (audio.value) {
+    audio.value.pause();
+    audio.value.currentTime = 0;
+  }
+};
 </script>
+
 <style scoped>
 .modal {
   position: fixed;
