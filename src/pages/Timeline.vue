@@ -168,4 +168,54 @@ const getData = () => {
   left: -15px;
   border-right: 15px solid var(--white-color);
 }
+.box-timeline__title {
+  font-size: clamp(18px, 2vw, 22px);
+}
+
+@media (max-width: 992px) {
+  .timeline__content {
+    padding: 15px 25px;
+  }
+}
+@media (max-width: 768px) {
+  .timeline:after {
+    left: 90%;
+  }
+  .box-timeline[data-v-c770f8bb]:nth-child(odd),
+  .box-timeline[data-v-c770f8bb]:nth-child(even) {
+    left: 0;
+  }
+
+  .box-timeline:nth-child(even) .timeline-circle {
+    right: -20px;
+    left: auto;
+  }
+
+  .box-timeline {
+    width: 91.8%;
+  }
+  .box-timeline:nth-child(even) .arrow {
+    right: -15px;
+    left: auto;
+    border-right: 15px solid var(--white-color);
+    border-left: 15px solid var(--white-color);
+  }
+  .box-timeline:nth-child(even) .arrow {
+    border-right: none;
+    border-left: 15px solid var(--white-color);
+  }
+}
+
+@media (max-width: 578px) {
+  .box-timeline {
+    padding: 10px 30px;
+  }
+  .timeline-circle {
+    width: 30px;
+    height: 30px;
+  }
+  .box-timeline {
+    padding: 10px 30px 10px 0px;
+  }
+}
 </style>

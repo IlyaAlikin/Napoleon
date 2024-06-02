@@ -119,7 +119,7 @@ const modalClose = () => {
 .modal__title {
   text-align: center;
   font-weight: 400;
-  font-size: 22px;
+  font-size: clamp(18px, 3vw, 22px);
 }
 
 .modal__title:has(.for-applicants__modal-title) {
@@ -132,11 +132,6 @@ const modalClose = () => {
   gap: 20px;
   align-items: center;
 }
-.modal__slider {
-}
-.modal__description {
-}
-
 .modal__slider {
   max-width: 460px;
 }
@@ -171,14 +166,40 @@ const modalClose = () => {
 }
 
 .modal__description {
-  font-size: 16px;
+  font-size: clamp(14px, 2vw, 16px);
+  max-height: 340px;
+  overflow-y: auto;
 }
 
-/* .modal__btn_yellow {
-  background: var(--main-color);
-}
+@media (max-width: 992px) {
+  .modal__content {
+    padding: 30px 35px 35px 45px;
+  }
 
-.modal__btn_white {
-  background: var(--main-color);
-} */
+  .modal__slider {
+    max-width: 320px;
+  }
+  .modal__slider img {
+    max-width: 320px;
+  }
+
+  .modal__volume {
+    font-size: 22px;
+  }
+
+  .modal__description {
+    max-height: 220px;
+  }
+  .modal__content {
+    padding: 30px 25px 25px 25px;
+  }
+}
+@media (max-width: 375px) {
+  .modal__slider {
+    max-width: 280px;
+  }
+  .modal__slider img {
+    max-width: 280px;
+  }
+}
 </style>

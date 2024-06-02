@@ -21,6 +21,10 @@ html {
   --gray-color: #202326;
 }
 
+body.lock {
+  overflow-y: hidden;
+}
+
 .blue {
   color: var(--blue-color);
 }
