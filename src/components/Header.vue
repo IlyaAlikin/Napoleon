@@ -11,15 +11,17 @@
               <li class="list-header">Биография</li>
             </RouterLink>
             <RouterLink to="/timeline">
-              <li class="list-header">Линия времени</li>
+              <li class="list-header">Таймлайн</li>
             </RouterLink>
-            <li class="list-header">Интерактивная карта</li>
+            <RouterLink to="/army">
+              <li class="list-header">Наполеоновская армия</li>
+            </RouterLink>
           </ul>
         </nav>
-        <div class="header__controls">
+        <!-- <div class="header__controls">
           <button class="language-button">Ru</button>
           <button class="language-button">En</button>
-        </div>
+        </div> -->
         <button @click="toggleMenu()" id="burger" class="header__burger">
           <span></span>
         </button>

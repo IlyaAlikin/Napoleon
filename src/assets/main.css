@@ -25,6 +25,19 @@ body.lock {
   overflow-y: hidden;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #bababa;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb {
+  background: #bababa;
+  border-radius: 20px;
+  border: 3px solid var(--blue-color);
+}
+
 .blue {
   color: var(--blue-color);
 }
@@ -146,6 +159,74 @@ body.lock {
 .swiper-pagination-bullet {
   text-align: center;
   background: var(--blue-color) !important;
+}
+
+.biography {
+  position: relative;
+  z-index: 3;
+}
+.section__block {
+  display: flex;
+}
+
+.section__img {
+  margin: 0 auto;
+}
+
+.section__img img {
+  max-height: 500px;
+  max-width: 100%;
+}
+.img-section-descripton {
+  text-align: center;
+  margin-top: 10px;
+  color: var(--white-color);
+  font-style: italic;
+}
+
+.biography__top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.section__volume {
+  font-size: 32px;
+  cursor: pointer;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section__title {
+  text-align: center;
+  font-size: clamp(32px, 4vw, 48px);
+}
+
+.section__block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.block-section__text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.section__block .block-section__text {
+  flex: 0 1 30%;
+}
+.section__block img {
+  flex: 0 1 60%;
+}
+
+.section__block .section__img {
+  margin: 0 0 0 0;
 }
 
 @media (max-width: 568px) {

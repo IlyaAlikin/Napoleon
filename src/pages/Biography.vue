@@ -10,16 +10,19 @@
         </p>
         <a class="full-screen__btn" href="#">Читать статью</a>
       </div>
-      <img src="/img/Napoleon-2.jpg" class="full-screen__video" />
+      <img src="/img/Young.jpg" class="full-screen__video biography__img" />
     </div>
   </section>
   <section class="section dark-gray-bg biography">
     <div class="section__container">
       <div class="section__block block-brief">
         <div class="section__text">
-          <h2 class="section__title white" @click="playAudio()">
-            Биография в двух словах
-          </h2>
+          <div class="biography__top">
+            <h2 class="section__title white">Моя биография</h2>
+            <button class="section__volume" @click="playAudio()">
+              <font-awesome-icon :icon="['fas', 'volume-off']" />
+            </button>
+          </div>
           <div class="section__wrapper">
             <p class="section__paragraph white">
               Я Наполеон первый Бонапарт, рожденный пятнадцатого августа, одна
@@ -106,27 +109,4 @@ onUnmounted(() => {
   rusAudio.currentTime = 0;
 });
 </script>
-<style scoped>
-.biography {
-  position: relative;
-  z-index: 3;
-}
-.section__block {
-  display: flex;
-}
-
-.section__img {
-  margin: 0 auto;
-}
-
-.section__img img {
-  max-height: 500px;
-  max-width: 100%;
-}
-.img-section-descripton {
-  text-align: center;
-  margin-top: 10px;
-  color: var(--white-color);
-  font-style: italic;
-}
-</style>
+<style scoped></style>

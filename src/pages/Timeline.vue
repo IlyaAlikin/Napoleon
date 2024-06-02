@@ -9,7 +9,7 @@
         </p>
         <a class="full-screen__btn" href="#">Читать статью</a>
       </div>
-      <img src="/img/Napoleon-2.jpg" class="full-screen__video" />
+      <img src="/img/Time.jpg" class="full-screen__video" />
     </div>
   </section>
   <section class="section dark-gray-bg timeline">

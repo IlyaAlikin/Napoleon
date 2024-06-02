@@ -2,7 +2,7 @@
   <div @keydown.esc="modalClose()" tabindex="-1" ref="modal" class="modal">
     <div class="modal__link" @click="modalClose()"></div>
     <div class="modal__content">
-      <div class="modal__close" @click="modalClose()">Закрыть</div>
+      <div class="modal__close" @click="modalClose()"></div>
       <div class="modal__top">
         <h2 class="modal__title">
           {{ title }}
@@ -11,7 +11,6 @@
           <font-awesome-icon :icon="['fas', 'volume-off']" />
         </button>
       </div>
-
       <div class="modal__wrapper">
         <div v-if="images">
           <swiper
@@ -138,6 +137,13 @@ const modalClose = () => {
 
 .modal__slider img {
   max-width: 460px;
+  max-height: 300px;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal__btns {
@@ -169,6 +175,7 @@ const modalClose = () => {
   font-size: clamp(14px, 2vw, 16px);
   max-height: 340px;
   overflow-y: auto;
+  padding-right: 5px;
 }
 
 @media (max-width: 992px) {
@@ -192,6 +199,15 @@ const modalClose = () => {
   }
   .modal__content {
     padding: 30px 25px 25px 25px;
+  }
+
+  .modal__top {
+    gap: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .modal__top {
+    gap: 15px;
   }
 }
 @media (max-width: 375px) {
