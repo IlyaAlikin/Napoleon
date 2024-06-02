@@ -138,11 +138,11 @@ const modalClose = () => {
 }
 
 .modal__slider {
-  max-width: 360px;
+  max-width: 460px;
 }
 
 .modal__slider img {
-  max-width: 360px;
+  max-width: 460px;
 }
 
 .modal__btns {
