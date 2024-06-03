@@ -4,7 +4,7 @@
       <h1 class="full-screen__title">Таймлайн</h1>
       <div class="full-screen__content">
         <p class="full-screen__text">
-          Сдесь собраны все важнейшие события в жизни Наполеона Бонапарта I в
+          Здесь собраны все важнейшие события в жизни Наполеона Бонапарта I в
           хронологическом порядке
         </p>
         <a class="full-screen__btn" href="#timeline">Читать статью</a>
